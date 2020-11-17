@@ -71,7 +71,7 @@
                   <br>
                   <a href="index.asp"><button name="button" class="btnEntrar">Entrar al sitio</button></a>
                   <div>
-            <p id="logoUES" style="margin-top: -12%; margin-left: 5%;"><img src="imagen/logoues12.png"  border="0" width="200" height="240" /></p>  
+            <p id="logoUES" style="margin-top: -12%; margin-left: 5%;"><img src="imagen/logoues12.png"  border="0" width="200" height="240"></p>  
             
 			    <p align="center">&nbsp;</p>
                 <p id="titulodefault2" style="padding-left: 230; text-align: center; font-size: 40px;"> PROYECTO DE SISTEMAS CONTABLES - 2020</p>

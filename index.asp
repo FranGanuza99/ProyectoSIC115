@@ -6,6 +6,10 @@
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
           <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
           
           <style type="text/css">
            @import url("css/formato.css");   
@@ -48,13 +52,16 @@
                 updateBackground();
               });
             });
+
+
+
             </script>
           </style>
      </head>
 
     <style type="text/css">
       body {
-      background:url('/imagen/index.png') no-repeat center center fixed;
+      background:url('/imagen/fondodefault2.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -64,8 +71,6 @@
 
      <body leftmargin="0" topmargin="0" background="ichigo.jpg" >
 
-
-	   <% if Session("sesion_nombre")="" then Response.Redirect "acceso.htm" %>
          <div id="header">
              <table width="100%" cellspacing="0" cellpadding="0">
                   <tr><tr><tr>
@@ -76,18 +81,10 @@
 
 <!-- Inicio del menu -->         
          <div id='cssmenu'>
-         <ul>
-<li class='has-sub '><a href='../index.asp'>INICIO</a>
       <ul>
-	     
-		 <li><a href='end_sesion.asp'><span>Cerrar Sesion</span></a></li>
-      </ul>
-   </li>
+   <li class='has-sub '><a href=''>INICIO</a></li>
 
-
-
-
-   <li class='has-sub '><a href='index.asp'><span>Usuarios</span></a>
+   <!--<li class='has-sub '><a href='index.asp'><span>Usuarios</span></a>
       <ul>
          <li><a href='nuevo_usuario/nuevo_usuario.asp'><span>Nuevo Usuario</span></a></li>
          <li><a href='consultar_usuario/consultar_usuario.asp'><span>Consultar</span></a></li>
@@ -103,8 +100,8 @@
          <li><a href='eliminar_empleado/eliminar_empleado.asp'><span>Eliminar</span></a></li>
          <li><a href='planillas/planillas.asp'><span>Planillas</span></a></li>
       </ul>
-   </li>
-   <li class='has-sub '><a href='index.asp'><span>Transacciones</span></a>
+   </li>-->
+   <li class='has-sub '><a href=''><span>Transacciones</span></a>
       <ul>
          <li><a href='nueva_transaccion/nueva_transaccion.asp'><span>Nueva Transaccion</span></a></li>
          <li><a href='libro_diario/librodiario.asp'><span>Mostrar Libro Diario</span></a></li>
@@ -113,7 +110,7 @@
          <li><a href='nueva_transaccion/menu.asp'><span>Transacciones Comunes</span></a></li>
       </ul>
    </li>
-   <li class='has-sub '><a href='index.asp'><span>Catalogo</span></a>
+   <li class='has-sub '><a href=''><span>Catalogo</span></a>
       <ul>
          <li><a href='nueva_cuenta/cuenta.asp'><span>Nueva Cuenta</span></a></li>
          <li><a href='consulta_de_cuenta/consulta_de_cuenta.asp'><span>Consultar Cuenta</span></a></li>
@@ -121,7 +118,7 @@
          <li><a href='catalogo/catalogo.asp'><span>Listar Catalogo</span></a></li>
       </ul>
    </li>
-   <li class='has-sub '><a href='index.asp'><span>Contabilidad General</span></a>
+   <li class='has-sub '><a href=''><span>Contabilidad General</span></a>
       <ul>
          <li><a href='balance_de_comprobacion/balance_de_comprobacion.asp'><span>Balance de Comprobacion</span></a></li>
          <li><a href='estado_de_resultados/estado_de_resultados.asp'><span>Estado de Resultado</span></a></li>
@@ -129,7 +126,7 @@
          <li><a href='balance_general/balance_general.asp'><span>Balance General</span></a></li>
       </ul>
   </li>
-   <li class='has-sub '><a href='index.asp'><span>Contabilidad de Costos</span></a>
+   <li class='has-sub '><a href=''><span>Contabilidad de Costos</span></a>
       <ul>
          <li><a href='nueva_ordenfabricacion/norden_fabricacion.asp'><span>Nueva Orden de Fabricacion</span></a></li>
          <li><a href='consulta_ordenfabricacion/corden_fabricacion.asp'><span>Consultar Orden de Fabricacion</span></a></li>
@@ -138,14 +135,29 @@
    </li>
 </ul>
 </div>
+
+
 <!-- Fin del menu -->
 <div>
   <br>
-<center><h1 style="color: DarkSlateGrey" > Bienvenido al sistema contable Invernalia </h1></center>
+<center><h1 style="color: DarkSlateGrey; font-size: 50px;" > Bienvenido al sistema contable "Hola Mundo" </h1></center>
 <hr>
-<center><p id="cajatexto">Software dedicado al manejo contable del sector textil de la empresa. 
+<center><p id="cajatexto" style="font-size: 40px;">Software dedicado al manejo contable de la empresa "Hola Mundo". 
 <br>
-Todas las acciones correspondientes se encuentran en la barra de menu. 
+
+<table style="margin-top: 100px; font-size: 25px; font-family: 'Century Gothic'; color: #000000;">
+   <tr>
+      <td>
+         <p style="margin-right: 200px; margin-left: 5%;">MISION</p>
+         <p style="margin-right: 200px; margin-left: 5%;">Buscar cada dia ser mejores en la empresa de software bla bla bla</p>
+      </td>
+      <td>
+         <p style="padding-left: 200px; margin-right: 5%;">VISION</p>
+         <p style="margin-left: 200px; margin-right: 5%;">Ser la mejor empresa en creacion de software bla bla bla</p>
+      </td>
+   </tr>
+</table>
+ 
  </p></center>
 </div>
 
