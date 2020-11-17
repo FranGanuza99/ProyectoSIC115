@@ -1,7 +1,7 @@
 function validar(dat)
 {
- totalc=0;
- totala=0;
+ totalc=0.0;
+ totala=0.0;
  
  if((dat.cc1.value == 0) || (dat.ca1.value == 0))
  {
@@ -60,12 +60,12 @@ if(dat.w1.checked == 1)
   x = chekar(dat.cc2, dat.mc2, dat, dat.w1)
   if(x == "malo")
     return false;
-  totalc = totalc + parseInt(dat.mc2.value);
+  totalc = parseFloat(totalc) + parseFloat(dat.mc2.value);
 } // Fin de si w1 esta chekado
 else
 {
  dat.cc2.value = "0";
- dat.mc2.value = "";
+ dat.mc2.value = "0";
 }
 
 /***************/
@@ -77,12 +77,12 @@ if(dat.w5.checked == 1)
   x = chekar(dat.ca2, dat.ma2, dat, dat.w5)
   if(x == "malo")
     return false;
-  totala = totala + parseInt(dat.ma2.value);
+  totala = parseFloat(totala) + parseFloat(dat.ma2.value);
 } // Fin de si w5 esta chekado
 else
 {
  dat.ca2.value = "0";
- dat.ma2.value = "";
+ dat.ma2.value = "0";
 }
 
 
@@ -95,12 +95,12 @@ if(dat.w9.checked == 1)
   x = chekar(dat.cc3, dat.mc3, dat, dat.w9)
   if(x == "malo")
     return false;
-  totalc = totalc + parseInt(dat.mc3.value);
+  totalc = parseFloat(totalc) + parseFloat(dat.mc3.value);
 } // Fin de si w9 esta chekado
 else
 {
  dat.cc3.value = "0";
- dat.mc3.value = "";
+ dat.mc3.value = "0";
 }
 
 /****************/
@@ -112,12 +112,12 @@ if(dat.w13.checked == 1)
   x = chekar(dat.ca3, dat.ma3, dat, dat.w13)
   if(x == "malo")
     return false;
-  totala = totala + parseInt(dat.ma3.value);
+  totala = parseFloat(totala) + parseFloat(dat.ma3.value);
 } // Fin de si w13 esta chekado
 else
 {
  dat.ca3.value = "0";
- dat.ma3.value = "";
+ dat.ma3.value = "0";
 }
 
 /****************/
@@ -129,12 +129,12 @@ if(dat.w17.checked == 1)
   x = chekar(dat.cc4, dat.mc4, dat, dat.w17)
   if(x == "malo")
     return false;
-  totalc = totalc + parseInt(dat.mc4.value);
+  totalc = parseFloat(totalc) + parseFloat(dat.mc4.value);
 } // Fin de si w17 esta chekado
 else
 {
  dat.cc4.value = "0";
- dat.mc4.value = "";
+ dat.mc4.value = "0";
 }
 
 /****************/
@@ -146,12 +146,12 @@ if(dat.w21.checked == 1)
   x = chekar(dat.ca4, dat.ma4, dat, dat.w21)
   if(x == "malo")
     return false;
-  totala = totala + parseInt(dat.ma4.value);
+  totala = parseFloat(totala) + parseFloat(dat.ma4.value);
 } // Fin de si w21 esta chekado
 else
 {
  dat.ca4.value = "0";
- dat.ma4.value = "";
+ dat.ma4.value = "0";
 }
 
 /****************/
@@ -163,12 +163,12 @@ if(dat.w25.checked == 1)
   x = chekar(dat.cc5, dat.mc5, dat, dat.w25)
   if(x == "malo")
     return false;
-  totalc = totalc + parseInt(dat.mc5.value);
+  totalc = parseFloat(totalc) + parseFloat(dat.mc5.value);
 } // Fin de si w25 esta chekado
 else
 {
  dat.cc5.value = "0";
- dat.mc5.value = "";
+ dat.mc5.value = "0";
 }
 
 /****************/
@@ -180,19 +180,19 @@ if(dat.w29.checked == 1)
   x = chekar(dat.ca5, dat.ma5, dat, dat.w29)
   if(x == "malo")
     return false;
-  totala = totala + parseInt(dat.ma5.value);
+  totala = parseFloat(totala) + parseFloat(dat.ma5.value);
 } // Fin de si w29 esta chekado
 else
 {
  dat.ca5.value = "0";
- dat.ma5.value = "";
+ dat.ma5.value = "0";
 }
 
-totalc = totalc + parseFloat(dat.mc1.value);
-totala = totala + parseFloat(dat.ma1.value);
+totalc = parseFloat(totalc) + parseFloat(dat.mc1.value);
+totala = parseFloat(totala) + parseFloat(dat.ma1.value);
 
 
-if(totalc != totala)
+if(parseFloat(totalc) != parseFloat(totala))
 {
   alert("CARGO:" + totalc + "\nABONO:" + totala + "\nNo cumples la partida doble");
   return false;
