@@ -1,4 +1,3 @@
-        <% if Session("sesion_nombre")="" then Response.Redirect "../acceso.htm" %>
         <div id="header">
             <table width="100%" cellspacing="0" cellpadding="0">
                   <tr><tr><tr>

@@ -3,7 +3,6 @@
      <head>
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
-          <% if Session("sesion_nombre")="" then Response.Redirect "../acceso.htm" %>
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
           <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
           

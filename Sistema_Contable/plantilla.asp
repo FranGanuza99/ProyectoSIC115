@@ -1,5 +1,4 @@
 
-	 <% if Session("sesion_nombre")="" then Response.Redirect "../acceso.htm" %>
         <div id="header">
             <table width="100%" cellspacing="0" cellpadding="0">
                   <tr><tr><tr>
@@ -19,12 +18,12 @@
         </div>
        <div id='cssmenu'>
 <ul>
-<li class='has-sub '><a href='../index.asp'><span>Inicio</span></a>
-      <ul>
+   <li class='has-sub '><a href='../index.asp'><span>Inicio</span></a>
+      <!--<ul>
 		 <li><a href='../end_sesion.asp'><span>Cerrar Sesion</span></a></li>
-      </ul>
+      </ul>-->
    </li>
-   <li class='has-sub '><a href='../index.asp'><span>Usuarios</span></a>
+   <!--<li class='has-sub '><a href='../index.asp'><span>Usuarios</span></a>
       <ul>
          <li><a href='../nuevo_usuario/nuevo_usuario.asp'><span>Nuevo Usuario</span></a></li>
          <li><a href='../consultar_usuario/consultar_usuario.asp'><span>Consultar</span></a></li>
@@ -40,7 +39,7 @@
          <li><a href='../eliminar_empleado/eliminar_empleado.asp'><span>Eliminar</span></a></li>
          <li><a href='../planillas/planillas.asp'><span>Planillas</span></a></li>
       </ul>
-   </li>
+   </li>-->
    <li class='has-sub '><a href='../index.asp'><span>Transacciones</span></a>
       <ul>
          <li><a href='../nueva_transaccion/nueva_transaccion.asp'><span>Nueva Transaccion</span></a></li>

@@ -1,7 +1,6 @@
 <%language="VBScript" %>
   
 <%  
-    if Session("sesion_nombre")="" then Response.Redirect "../acceso.htm" 
    set con=Server.CreateObject("ADOdb.Connection")
    con.Open "Datos","","" 
    cadena="DELETE * FROM Mayor"
