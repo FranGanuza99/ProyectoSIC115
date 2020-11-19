@@ -26,7 +26,7 @@
                'Creacion del Objeto para conectarse a la base de datos 
                 Set conn=Server.CreateObject("ADOdb.Connection")
                   
-                'Se abre la conexión a la base de datos
+                'Se abre la conexiï¿½n a la base de datos
                 conn.Open "Datos","","" 
                             
                              
@@ -36,7 +36,7 @@
      </head>
      <style type="text/css">
       body {
-      background:url('/imagen/index.png') no-repeat center center fixed;
+      background:url('/imagen/fondodefault2.jpg') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;

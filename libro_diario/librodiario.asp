@@ -15,7 +15,7 @@
 
      	<style type="text/css">
           body {
-          background:url('/imagen/index.png') no-repeat center center fixed;
+          background:url('/imagen/fondodefault2.jdp') no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;

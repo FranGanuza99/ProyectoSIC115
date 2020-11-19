@@ -107,7 +107,7 @@
          <li><a href='libro_diario/librodiario.asp'><span>Mostrar Libro Diario</span></a></li>
          <li><a href='cierre_de_periodo/cierre_de_periodo.asp'><span>Cierre de Periodo</span></a></li>
          <li><a href='cierre_de_periodo/ajustes.asp'><span>Ajustes</span></a></li>
-         <li><a href='nueva_transaccion/menu.asp'><span>Transacciones Comunes</span></a></li>
+         <!--<li><a href='nueva_transaccion/menu.asp'><span>Transacciones Comunes</span></a></li>-->
       </ul>
    </li>
    <li class='has-sub '><a href=''><span>Catalogo</span></a>
