@@ -25,7 +25,7 @@
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 		   <br><br>
-       <p id="titulo">Planillas de pagos</p>
+       <p id="titulo">Costo Real de Mano de Obra</p>
        <br>
        <hr>
        <br>
