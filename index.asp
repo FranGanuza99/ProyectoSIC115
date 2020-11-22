@@ -140,20 +140,20 @@
 <!-- Fin del menu -->
 <div>
   <br>
-<center><h1 style="color: DarkSlateGrey; font-size: 50px;" > Bienvenido al sistema contable "Hola Mundo" </h1></center>
+<center><h1 style="color: DarkSlateGrey; font-size: 50px;" > Bienvenido al sistema contable "MICROTECN" </h1></center>
 <hr>
-<center><p id="cajatexto" style="font-size: 40px;">Software dedicado al manejo contable de la empresa "Hola Mundo". 
+<center><p id="cajatexto" style="font-size: 40px;">Software dedicado al manejo contable de la empresa "MICROTECN". 
 <br>
 
 <table style="margin-top: 100px; font-size: 25px; font-family: 'Century Gothic'; color: #000000;">
    <tr>
       <td>
-         <p style="margin-right: 200px; margin-left: 5%;">MISION</p>
-         <p style="margin-right: 200px; margin-left: 5%;">Buscar cada dia ser mejores en la empresa de software bla bla bla</p>
+         <p style="margin-right: 200px; margin-left: 15%;">MISION</p>
+         <p style="margin-right: 200px; margin-left: 15%;">Buscar cada dia ser mejores en el desarrollo de software, desarrollando siempre con tecnologia a la vanguardia</p>
       </td>
       <td>
-         <p style="padding-left: 200px; margin-right: 5%;">VISION</p>
-         <p style="margin-left: 200px; margin-right: 5%;">Ser la mejor empresa en creacion de software bla bla bla</p>
+         <p style="padding-left: 200px; margin-right: 10%;">VISION</p>
+         <p style="margin-left: 200px; margin-right: 10%;">Ser la mejor empresa en creacion de software y dar los mejores productos y servicios a nuestros clientes manteniendo un sano ambiente laboral</p>
       </td>
    </tr>
 </table>
