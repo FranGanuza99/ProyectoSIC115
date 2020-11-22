@@ -4,13 +4,13 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <%
                'Creacion del Objeto para conectarse a la base de datos 
                 Set conn=Server.CreateObject("ADOdb.Connection")
 
-                'Se abre la conexión a la base de datos
+                'Se abre la conexiï¿½n a la base de datos
                 conn.Open "Datos","","" 
                  
                 orden=Request.QueryString("numorden")
@@ -41,7 +41,7 @@
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
           <br><br>
-                <p id="titulo">Nueva orden de fabricación</p>
+                <p id="titulo">Nueva orden de fabricaciï¿½n</p>
        <br>
        <hr>
        <br>

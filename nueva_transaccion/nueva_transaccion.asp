@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <script language="JavaScript" src = "forms.js"></script>
           <script language = "javascript" src = "visual.js"></script>
@@ -56,7 +56,7 @@
      Dim Conexion,sql, List, cod, nom
      Set Conexion = Server.CreateObject("ADODB.Connection")
      Conexion.open "Datos","",""
-     sql="SELECT * FROM catalogo"
+     sql="SELECT * FROM catalogo WHERE NOT codigo = 5003"
 
      x = 1
      for i = 1 to 5

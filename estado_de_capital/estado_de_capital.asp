@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <%
             dim SumaInv,SumaDesinv
@@ -12,7 +12,8 @@
             set cnn1 = Server.CreateObject("ADODB.Connection")
             cnn1.open "Datos","",""
 
-            sql ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND (Catalogo.Tipo=8)"
+            'sql ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND (Catalogo.Tipo=8)"
+            sql ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND Catalogo.codigo >= 3000 AND Catalogo.codigo < 4000"
             'sql = "SELECT * FROM mayor WHERE codigo >= 3000 AND codigo < 4000 ORDER BY codigo;"
             set rsMbrs = cnn1.execute(sql)
           %>
@@ -36,7 +37,7 @@
 		  <div id='logo1'>
                <td valign="top" class="content">   
                <% if Session("PeriodoCerrado") <> "no" then %>
-                <center><h1><font color="black"><N> Empresa Solidaria Textil "Invernalia" <N></font></h1></center>
+                <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
 			   <center><h1><font color="black"><N> Estado De Capital <N></font></h1></center>
           <left><h3><font color="black"><N> Inversiones<N></font></h3></left>
       <table align="center" border-spacing="0" width="500px">
@@ -65,8 +66,8 @@
                        loop
                      %>
                           <tr valign="TOP">
-                             <td WIDTH="70" align="left">3001</td>
-                             <td WIDTH="400" align="left">Utilidad</td>
+                             <td WIDTH="70" align="left">3003</td>
+                             <td WIDTH="400" align="left">Utilidades del Periodo</td>
                              <td>&nbsp</td>
                              <td WIDTH="100" align="left"> <%=session("utilidad")%></td>
                           </tr>

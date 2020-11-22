@@ -5,7 +5,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Empresa Consultora de Software MICROTECN"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

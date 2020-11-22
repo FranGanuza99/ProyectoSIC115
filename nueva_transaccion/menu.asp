@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <script language="JavaScript" src = "forms.js"></script>
           <script language = "javascript" src = "visual.js"></script>
@@ -62,7 +62,7 @@
 
                  <p id="tituloVentas">Ventas</p><br><br>
                  <a  id="cuentasVentas" href = "ventas.asp?tipo=1"><font style="font-size:200%" color="black"> Jeans Damas </a></font><br>
-                 <a id="cuentasVentas" href = "ventas.asp?tipo=2"><font style="font-size:200%" color="black"> Vestidos de Niña</a></font><br>
+                 <a id="cuentasVentas" href = "ventas.asp?tipo=2"><font style="font-size:200%" color="black"> Vestidos de Niï¿½a</a></font><br>
 
                 </td>
               </tr>

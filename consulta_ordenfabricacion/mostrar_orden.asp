@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <style type="text/css">
        @import url("../css/formato.css");
@@ -14,7 +14,7 @@
                'Creacion del Objeto para conectarse a la base de datos 
                 Set conn=Server.CreateObject("ADOdb.Connection")
 
-                'Se abre la conexión a la base de datos
+                'Se abre la conexiï¿½n a la base de datos
                 conn.Open "Datos","","" 
                  
                 orden=Request.form("orden")

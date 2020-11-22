@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <%
             dim SumaIngreso,SumaGasto
@@ -38,7 +38,7 @@
 		  <div id='logo1'>
                <td valign="top" class="content" align="center">      
                <% if Session("PeriodoCerrado") <> "no" then %>
-                <center><h1><font color="black"><N> Empresa Solidaria Textil "Invernalia" <N></font></h1></center>
+                <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
 			   <center><h1><font color="black"><N> Estado De Resultados <N></font></h1></center>
           <left><h3><font color="black"><N> Ingresos<N></font></h3></left>
                   <table align="center" border-spacing="0" width="500px">

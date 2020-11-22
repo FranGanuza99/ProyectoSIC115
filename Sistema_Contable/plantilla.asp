@@ -30,16 +30,16 @@
          <li><a href='../modificar_datos_de_usuario/modificar_datos_de_usuario.asp'><span>Modificar</span></a></li>
          <li><a href='../eliminar_usuario/eliminar_usuario.asp'><span>Eliminar</span></a></li>
       </ul>
-   </li>
+   </li>-->
    <li class='has-sub '><a href='../index.asp'><span>Empleados</span></a>
       <ul>
          <li><a href='../nuevo_empleado/nuevo_empleado.asp'><span>Nuevo Empleado</span></a></li>
          <li><a href='../consultar_datos_de_empleado/consultar_datos_de_empleado.asp'><span>Consultar</span></a></li>
          <li><a href='../modificar_datos_de_empleado/modificar_datos_de_empleado.asp'><span>Modificar</span></a></li>
          <li><a href='../eliminar_empleado/eliminar_empleado.asp'><span>Eliminar</span></a></li>
-         <li><a href='../planillas/planillas.asp'><span>Planillas</span></a></li>
+         <li><a href='../planillas/planillas.asp'><span>Costo Real MO</span></a></li>
       </ul>
-   </li>-->
+   </li>
    <li class='has-sub '><a href='../index.asp'><span>Transacciones</span></a>
       <ul>
          <li><a href='../nueva_transaccion/nueva_transaccion.asp'><span>Nueva Transaccion</span></a></li>
@@ -51,9 +51,7 @@
    </li>
    <li class='has-sub '><a href='../index.asp'><span>Catalogo</span></a>
       <ul>
-         <li><a href='../nueva_cuenta/cuenta.asp'><span>Nueva Cuenta</span></a></li>
          <li><a href='../consulta_de_cuenta/consulta_de_cuenta.asp'><span>Consultar Cuenta</span></a></li>
-         <li><a href='../eliminacion_de_cuenta/eliminacion_de_cuenta.asp'><span>Eliminar Cuenta</span></a></li>
          <li><a href='../catalogo/catalogo.asp'><span>Listar Catalogo</span></a></li>
       </ul>
    </li>

@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <script language="Javascript" src="forms.js">
 
@@ -51,7 +51,7 @@
                                 'Creacion del Objeto para conectarse a la base de datos 
                                 Set conn=Server.CreateObject("ADOdb.Connection")
 
-                                'Se abre la conexión a la base de datos
+                                'Se abre la conexiï¿½n a la base de datos
                                 conn.Open "Datos","","" 
          
                                 sql="SELECT NumOrden   FROM  ordenes ORDER BY NumOrden"
@@ -76,13 +76,13 @@
                                     <select name="producto">
                                        <option value="0">Seleccione un producto</option>
                               <%
-		                sql1="SELECT Catalogo.NombreCuenta,  Catalogo.Codigo FROM Catalogo WHERE Catalogo.Codigo>5000 and Catalogo.Codigo<5018"		
+		                sql1="SELECT Catalogo.NombreCuenta,  Catalogo.Codigo FROM Catalogo WHERE Catalogo.Codigo=5000"		
                                 Set R = conn.Execute(sql1)		   
 		
                                 while Not(R.EOF)
                                     cont=cont+1
                                     cod = R("Codigo")
-                                    nom = R("NombreCuenta")
+                                    nom = "Software"
 			            Response.Write("<option value= '" & cod & "'>"& nom &"</option>")
 				    R.MoveNext
                    	         wend
@@ -100,68 +100,68 @@
 		               <tr>
 	                          <th colspan="2">Materia Prima</th>
                                   <th colspan="3">Mano de Obra</th>
-                                  <th colspan="2">GIF</th>
+                                  <th colspan="2">CIF</th>
 		               </tr>
 		               <tr>
 		                  <th >Material</th>
 			          <th >Cantidad</th>
-                                  <th >No de Obreros</th>
+                                  <th >No de Desarrolladores</th>
 			          <th >CostoxHora</th>
 			          <th >No de Horas</th>
                                   <th >Tasa</th>
 			          <th >Importe</th>
 		               </tr>
 		               <tr>
-		                  <td ><select name="mat1">
-                                     <option value="0" selected >Seleccione una MP</option> 
-	                  <%
-		            sql="SELECT Catalogo.NombreCuenta,  inventario.codigo FROM Catalogo, inventario WHERE Catalogo.Codigo=inventario.codigo"		
-                            Set resul = conn.Execute(sql)		   
-                            cont=0
-                                  while Not(resul.EOF)
-                                      cont=cont+1
-                                      cod = resul("codigo")
-                                      nom = resul("NombreCuenta")
-			              Response.Write("<option value= '" & cod & "'>"& nom &"</option>")
-			   	      resul.MoveNext
-                   	          wend        
-	                  %>
-			   	       </select></td>
-			          <td ><input name="cant1" type="text" onblur="validar1(this)"></td>
-                                  <td ><input name="obrero1" type="text" onblur="validar1(this)"></td>
-		                  <td ><input name="costo1" type="text" onblur="validar1(this)"></td>
-		                  <td ><input name="hora1" type="text" onblur="validar1(this)"></td>
-                                  <td ><input name="tasa1" type="text" onblur="validar1(this)"></td>
-		                  <td ><input name="importe1" type="text" onblur="validar1(this)"></td>
+		                  <td><select name="mat1" disabled>
+                              <option value="0" selected >Seleccione una MP</option> 
+                        <%
+                           sql="SELECT Catalogo.NombreCuenta,  inventario.codigo FROM Catalogo, inventario WHERE Catalogo.Codigo=inventario.codigo"		
+                           Set resul = conn.Execute(sql)		   
+                           cont=0
+                           while Not(resul.EOF)
+                              cont=cont+1
+                              cod = resul("codigo")
+                              nom = resul("NombreCuenta")
+                           Response.Write("<option value= '" & cod & "'>"& nom &"</option>")
+                           resul.MoveNext
+                           wend        
+                        %>
+                        </select></td>
+                        <td ><input name="cant1" type="text" disabled></td>
+                        <td ><input name="obrero1" type="text" onblur="validar1(this)"></td>
+                        <td ><input name="costo1" type="text" onblur="validar1(this)"></td>
+                        <td ><input name="hora1" type="text" onblur="validar1(this)"></td>
+                        <td ><input name="tasa1" type="text" onblur="validar1(this)"></td>
+                        <td ><input name="importe1" type="text" onblur="validar1(this)"></td>
 		               </tr>
-                          <% if cont>1 then
-                                for i=2 to cont
-                          %>
-                               <tr>
-		                  <td ><select name="mat<%=i%>">
-                                       <option value="0" selected>Seleccione una MP</option> 
-			  <%
-                                     resul.MoveFirst
-			  	     while Not(resul.EOF)
-                                         cod = resul("Codigo")
-                                         nom = resul("NombreCuenta")
-			                 Response.Write("<option value= '" & cod & "'>"& nom &"</option>")
-			  	         resul.MoveNext
-                   	             wend
-                                    session("num")=cont
-		          %>
-				        </select></td>
-			           <td ><input name="cant<%=i%>" type="text" onblur="validar1(this)"></td>
-                                   <td ><input name="obrero<%=i%>" type="text" onblur="validar1(this)"></td>
-		                   <td ><input name="costo<%=i%>" type="text" onblur="validar1(this)"></td>
-		                   <td ><input name="hora<%=i%>" type="text" onblur="validar1(this)"></td>
-                                   <td ><input name="tasa<%=i%>" type="text" onblur="validar1(this)"></td>
-		                   <td ><input name="importe<%=i%>" type="text" onblur="validar1(this)"></td>
-		                </tr>
-                          <%                  
-                                next    
-                            End if
-                          %>
+                     <% if cont>1 then
+                           for i=2 to cont
+                     %>
+                              <tr>
+                                 <td><select name="mat<%=i%>">
+                                    <option value="0" selected>Seleccione una MP</option> 
+                                    <%
+                                       resul.MoveFirst
+                                       while Not(resul.EOF)
+                                          cod = resul("Codigo")
+                                          nom = resul("NombreCuenta")
+                                          Response.Write("<option value= '" & cod & "'>"& nom &"</option>")
+                                          resul.MoveNext
+                                       wend
+                                       session("num")=cont
+                                    %>
+                                 </select></td>
+                                 <td ><input name="cant<%=i%>" type="text" onblur="validar1(this)"></td>
+                                 <td ><input name="obrero<%=i%>" type="text" onblur="validar1(this)"></td>
+                                 <td ><input name="costo<%=i%>" type="text" onblur="validar1(this)"></td>
+                                 <td ><input name="hora<%=i%>" type="text" onblur="validar1(this)"></td>
+                                 <td ><input name="tasa<%=i%>" type="text" onblur="validar1(this)"></td>
+                                 <td ><input name="importe<%=i%>" type="text" onblur="validar1(this)"></td>
+                              </tr>
+                     <%                  
+                           next    
+                        End if
+                     %>
                           </table>
                           <input type="hidden" name="cont" value="<%=cont%>">
                           <p>&nbsp</p>
