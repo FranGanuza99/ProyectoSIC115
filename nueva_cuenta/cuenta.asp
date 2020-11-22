@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Sistema Contable Empresa Consultora de Software MICROTECN"/>
 
           <script language="Javascript">
                 function validar(f){
@@ -72,7 +72,6 @@
                        <option value = "2"> Pasivo </option>
                        <option value = "3"> Capital </option>
                        <option value = "4"> Ingresos </option>
-                       <option value = "5"> Costos </option>
                        <option value = "6"> Gastos </option>
                        <option value = "7"> Desinversiones </option>
                        <option value = "8"> Inversiones </option>

@@ -1,7 +1,7 @@
 function validar(dat)
 {
  
-if(dat.mat1.value == 0)
+/*if(dat.mat1.value == 0)
  {
   alert("Debe seleccionar al menos una materia prima");
   dat.mat1.focus();
@@ -15,7 +15,7 @@ if(dat.mat1.value == 0)
    dat.cant1.focus();
    return false;
   }
- }
+ }*/
 
 
  if(dat.producto.value == 0)

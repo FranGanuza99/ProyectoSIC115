@@ -6,7 +6,7 @@
   producto= request.form("producto")
   cantidad= request.form("cantidad") 
   
-  j=session("num")
+  j=1
   montoP=0
   
   set con=Server.CreateObject("ADOdb.Connection")
@@ -52,7 +52,7 @@
         montobra= montobra+(nobra*costohora*numhora)
      end if
   next
-  sql="INSERT INTO Diario (NumTrans, codigo, abono, fecha) VALUES ('" & numero+1 & "', '4000', '" & montobra & "', '" & fecha & "')"
+  sql="INSERT INTO Diario (NumTrans, codigo, abono, fecha) VALUES ('" & numero+1 & "', '4019', '" & montobra & "', '" & fecha & "')"
   con.Execute(sql)
  
   montogif=0

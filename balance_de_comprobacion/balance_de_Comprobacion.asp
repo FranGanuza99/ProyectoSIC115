@@ -4,7 +4,7 @@
           <title>Sistema Contable</title>
           <META HTTP-EQUIV="EXPIRES" CONTENT="0">
           <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-          <meta name="Sitio Contable" content="Sistema Contable Empresa Solidaria Textil"/>
+          <meta name="Sitio Contable" content="Empresa Consultora de Software MICROTECN"/>
   <%
     dim SumaSaldo,SumaAbono
     Set cnn1 = Server.CreateObject("ADODB.Connection")
@@ -42,7 +42,7 @@
        <br>
 
      <div id='logo1'>
-        <center><h1 id="titulo"> Empresa Solidaria Textil "Invernalia" </h1></center>
+        <center><h1 id="titulo"> Empresa Consultora de Software MICROTECN  </h1></center>
 
                <td valign="top"   class="content">             
                      <% if Session("PeriodoCerrado") <> "no" then %>
