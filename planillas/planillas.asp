@@ -44,44 +44,46 @@
 	                 <tr align="center" style=" background:orange;"> 
 	                    <th COLSPAN="2"><h2> Empleado </h2></th>
 	                    <th ROWSPAN="2"><h2> Cargo </h2></th> 
-	                    <th ROWSPAN="2"><h2> Salario base </h2></th> 
-	                    <th><h2> Otras Remuneraciones </h2></th>
-	                    <th ROWSPAN="2"><h2> T. Devengado </h2></th> 
-	                    <th COLSPAN="3"><h2> Retenciones </h2></th>
-	                    <th ROWSPAN="2"><h2> Liquido a Pagar </h2></th> 
+	                    <th ROWSPAN="2"><h2> Salario nominal </h2></th> 
+	                    
+	                    
+	                    <th COLSPAN="5"><h2> Prestaciones </h2></th>
+	                    <th ROWSPAN="2"><h2> Salario Real (Sem)</h2></th> 
 	                 </tr> 
 	                 <tr align="center" style=" background:orange;"> 
 	                    <td><h2> Apellidos </h2></td>
 	                    <td><h2> Nombres </h2></td>
-	                    <td><h2> H. extras </h2></td> 
-	                    <td><h2> ISSS </h2></td>
-	                    <td><h2> AFP </h2></td>
-	                    <td><h2> Renta </h2></td>  
+
+	                    <td><h2> Septimo </h2></td> 
+                      <td><h2> Aguinaldo </h2></td>  
+                      <td><h2> Vacaciones </h2></td>  
+	                    <td><h2> ISSS (7.5%)</h2></td>
+	                    <td><h2> AFP (6.5%)</h2></td>
+                      
 	                 </tr>
                     <% 
                       while not spl1.EOF 
-                        sueldos= spl1("Salario")+ spl1("Horas")
-                        suma= suma+sueldos
-                        iss= sueldos*.035
-                        isst= isst+iss
-                        afp= sueldos*.0625
-                        afpt= afpt+afp
-                        ren= sueldos*.02
-                        rent= rent+ren 
-                        sueldo=sueldos-iss-afp-ren
-                        sueldot=sueldot+sueldo  
+                        nominal = spl1("Salario")
+                        septimo = nominal * 7
+                        aguinaldo = (15 * nominal)/52
+                        vacaciones = ((15 * nominal) * 1.3)/52
+                        isss = (septimo + Round (vacaciones, 2)) * 0.075
+                        afp = (septimo + Round (vacaciones, 2)) * 0.065
+                        sueldo = septimo + Round (aguinaldo, 2) + Round (vacaciones, 2) + isss + afp 
+
                     %>
                          <TR width="100%" align="center">
                             <td><h2><strong><%=spl1("Apellidos")%></strong></h2></td> 
                             <td><h2><strong><%=spl1("Nombres")%></strong></h2></td>
                             <td><h2><strong><%=spl1("Puesto")%></strong></h2></td>
                             <td><h2><strong>$<%=spl1("Salario")%></strong></h2></td>
-                            <td><h2><strong>$<%=spl1("Horas")%></strong></h2></td>
-                            <td><h2><strong>$<%=sueldos%></strong></h2></td>
-                            <td><h2><strong>$<%=iss %></strong></h2></td>
-                            <td><h2><strong>$<%=afp %></strong></h2></td>
-                            <td><h2><strong>$<%=ren %></strong></h2></td>
-                            <td><h2><strong>$<%=sueldo %></strong></h2></td>  
+                            
+                            <td><h2><strong>$<%=septimo %></strong></h2></td>
+                            <td><h2><strong>$<%=Round (aguinaldo, 2) %></strong></h2></td>
+                            <td><h2><strong>$<%=Round (vacaciones, 2) %></strong></h2></td>
+                            <td><h2><strong>$<%=Round (isss, 2) %></strong></h2></td>
+                            <td><h2><strong>$<%=Round (afp, 2) %></strong></h2></td>
+                            <td><h2><strong>$<%=Round (sueldo, 2) %></strong></h2></td>  
                          </TR> 
                    <%
                        spl1.Movenext
