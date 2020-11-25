@@ -6,8 +6,8 @@
   producto= request.form("producto")
   cantidad= request.form("cantidad") 
   
-  j=1
-  montoP=0
+  j=session("num")
+  
   
   set con=Server.CreateObject("ADOdb.Connection")
   con.Open "Datos","","" 
@@ -24,7 +24,7 @@
      numero=0
   end if
 
-
+  montoP=0
   for i=1 to j
     mat=request.form("mat"&i)
     cant=request.form("cant"&i)
@@ -49,35 +49,42 @@
      costohora=request.form("costo"&i)
      numhora=request.form("hora"&i)
      if nobra <> "" then
-        montobra= montobra+(nobra*costohora*numhora)
+        montobra= montobra+(costohora*numhora)
      end if
   next
-  sql="INSERT INTO Diario (NumTrans, codigo, abono, fecha) VALUES ('" & numero+1 & "', '4019', '" & montobra & "', '" & fecha & "')"
+  sql="INSERT INTO Diario (NumTrans, codigo, cargo, fecha) VALUES ('" & numero+1 & "', '4019', '" & Round (montobra,2) & "', '" & fecha & "')"
   con.Execute(sql)
  
-  montogif=0
+   montogif=0
+   electricidad = 0
+   internet = 0
   for i=1 to j
      tasa=request.form("tasa"&i)
-     importe=request.form("importe"&i)
+     horacif=request.form("horacif"&i)
      if tasa <> "" then
-        montogif=montogif+importe
+         electricidad = 3.5 * horacif
+         internet = (tasa - 3.5) * horacif
+         montogif = Round (electricidad,2) + Round (internet,2)
      end if
   next
-  sql="INSERT INTO Diario (NumTrans, codigo, abono, fecha) VALUES ('" & numero+1 & "', '5000', '" & montogif & "', '" & fecha & "')"
+  sql="INSERT INTO Diario (NumTrans, codigo, cargo, fecha) VALUES ('" & numero+1 & "', '4008', '" & Round (electricidad,2) & "', '" & fecha & "')"
+  con.Execute(sql)
+
+  sql="INSERT INTO Diario (NumTrans, codigo, cargo, fecha) VALUES ('" & numero+1 & "', '4017', '" & Round (internet,2) & "', '" & fecha & "')"
   con.Execute(sql)
  
-  MontoTotal= montoP+montobra+montogif
+  MontoTotal= montoP + Round (montobra,2) + Round (electricidad,2) + Round (internet,2)
   precioU=MontoTotal/cantidad
   p=producto+3
   
        
-  sql="INSERT INTO ordenes(NumOrden, codigo, fecha,  MontoMP, MontoMObra, MontoGif, Monto, Cantidad, PrecioU) VALUES('"&Norden&"', '"&p&"', #"&fecha&"#, '"&montoP&"', '"&montobra&"', '"&montogif&"', '"&MontoTotal&"', '"&cantidad&"', '"&precioU&"')"
+  sql="INSERT INTO ordenes(NumOrden, codigo, fecha,  MontoMP, MontoMObra, MontoGif, Monto, Cantidad, PrecioU) VALUES('"&Norden&"', '"&p&"', #"&fecha&"#, '"&Round (montoP,2)&"', '"&Round (montobra,2)&"', '"&Round (montogif,2)&"', '"&Round (MontoTotal,2)&"', '"&cantidad&"', '"&Round (precioU,2)&"')"
   con.Execute(sql)
   
  
 
 
-  sql="INSERT INTO Diario (NumTrans, codigo, cargo, fecha) VALUES ('" & numero+1 & "', '" & producto+3 & "', '" & MontoTotal & "', '" & fecha & "')"
+  sql="INSERT INTO Diario (NumTrans, codigo, abono, fecha) VALUES ('" & numero+1 & "', '" & producto & "', '" & Round (MontoTotal,2) & "', '" & fecha & "')"
   response.write(sql)
   con.Execute(sql)
 

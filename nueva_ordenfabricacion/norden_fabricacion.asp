@@ -12,6 +12,63 @@
             @import url("../css/formato2.css");           
          </style>  
      </head>
+     <script type="text/javascript">
+         $(document).ready(function() {
+            $("#tasa1").val(3.5625);
+            $("#horacif1").val(0); 
+         });
+
+         function suma(){
+            horas = 0;
+
+            if ($('#hora1').length) {
+               if ($('#hora1').val() != 0) {
+                  horas = horas + parseInt($("#hora1").val());
+               } 
+            } 
+            if ($('#hora2').length) {
+               if ($('#hora2').val() != 0) {
+                  horas = horas + parseInt($("#hora2").val());
+               }
+            }
+            if ($('#hora3').length) {
+               if ($('#hora3').val() != 0) {
+                  horas = horas + parseInt($("#hora3").val());
+               }
+            }
+            if ($('#hora4').length) {
+               if ($('#hora4').val() != 0) {
+                  horas = horas + parseInt($("#hora4").val());
+               }
+            }
+            if ($('#hora5').length) {
+               if ($('#hora5').val() != 0) {
+                  horas = horas + parseInt($("#hora5").val());
+               }
+            }
+
+            if ($('#hora6').length) {
+               if ($('#hora6').val() != 0) {
+                  horas = horas + parseInt($("#hora6").val());
+               }
+            }
+
+            if ($('#hora7').length) {
+               if ($('#hora7').val() != 0) {
+                  horas = horas + parseInt($("#hora7").val());
+               }
+            }
+
+            if ($('#hora8').length) {
+               if ($('#hora8').val() != 0) {
+                  horas = horas + parseInt($("#hora8").val());
+               }
+            }
+            
+            $('#horacif1').val(horas);
+
+         }
+     </script>
      <body leftmargin="10" topmargin="160">
 
         <style type="text/css">
@@ -97,7 +154,7 @@
 		               <tr>
                         <th colspan="2">Materia Prima</th>
                         <th colspan="3">Mano de Obra</th>
-                        <th colspan="3">CIF</th>
+                        <th colspan="2">CIF</th>
                      </tr>
                      <tr>
                         <th >Material</th>
@@ -105,7 +162,6 @@
                         <th >No de Desarrolladores</th>
                         <th >CostoxHora</th>
                         <th >No de Horas</th>
-                        <th >Costo</th>
                         <th >Monto por hora</th>
                         <th >Horas</th>
                      </tr>
@@ -143,10 +199,9 @@
                         %>
                         </select></td>
                         <td ><input id="costo1" name="costo1" type="text" onblur="validar1(this)" onfocus="this.blur()"></td>
-                        <td ><input id="hora1" name="hora1" type="text" onblur="validar1(this)"></td>
-                        <td ><input id="importesd" name="importe2" type="text"></td>
+                        <td ><input id="hora1" name="hora1" type="text" onblur="validar1(this)" onchange="suma()"></td>
                         <td ><input id="tasa1" name="tasa1" type="text" onblur="validar1(this)"></td>
-                        <td ><input id="importe1" name="importe1" type="text" onblur="validar1(this)"></td>
+                        <td ><input id="horacif1" name="horacif1" type="text" onblur="validar1(this)" onfocus="this.blur()"></td>
                         
 		               </tr>
                      <% if cont>1 then
@@ -187,10 +242,9 @@
                                  </select></td>
                                  
                                  <td ><input id="costo<%=i%>" name="costo<%=i%>" type="text" onfocus="this.blur()"></td>
-                                 <td ><input name="hora<%=i%>" type="text" onblur="validar1(this)"></td>
-                                 <td ><input name="importes<%=i%>" type="text"></td>
-                                 <td ><input name="tasa<%=i%>" type="text" onblur="validar1(this)" ></td>
-                                 <td ><input name="importe<%=i%>" type="text" onblur="validar1(this)" ></td>     
+                                 <td ><input id="hora<%=i%>" name="hora<%=i%>" type="text" onblur="validar1(this)" onchange="suma()"></td>
+                                 <td ><input id="tasa<%=i%>" name="tasa<%=i%>" type="text" disabled></td>
+                                 <td ><input id="horacif<%=i%>" name="horacif<%=i%>" type="text" disabled></td>     
                               </tr>
                      <%                  
                            next    
