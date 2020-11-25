@@ -99,10 +99,10 @@ table {
 			color: #fff;
 			text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
 			background: #0e08b2;
-			background: -webkit-linear-gradient(bottom, #0e08b2, #f45d57);
-			background: -ms-linear-gradient(bottom, #0e08b2, #f45d57); 
-			background: -moz-linear-gradient(bottom, #0e08b2, #f45d57);
-			background: -o-linear-gradient(bottom, #0e08b2, #f45d57);
+			background: -webkit-linear-gradient(bottom, #63b208, #b9cc12);
+			background: -ms-linear-gradient(bottom,  #63b208, #b9cc12); 
+			background: -moz-linear-gradient(bottom,  #63b208, #b9cc12);
+			background: -o-linear-gradient(bottom,  #63b208, #b9cc12);
 			border-color: transparent;
 			#0e08b2
 		}
