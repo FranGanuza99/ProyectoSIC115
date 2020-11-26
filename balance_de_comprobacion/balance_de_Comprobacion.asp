@@ -48,20 +48,21 @@
                      <% if Session("PeriodoCerrado") <> "no" then %>
          
       
-      <br>
-                     <table id="fieldset2"  border-spacing="0"> 
-                          <tr >
-                             <th bgcolor="#5882FA"><h2><font color="black"><N>Codigo</N></font></h2></th>
-                             <th bgcolor="#5882FA"><h2><font color="black"><N>Nombre</N></font></h2></th>
-                             <th bgcolor="#5882FA"><h2><font color="black"><N>Cargo</N></font></h2></th>
-                             <th bgcolor="#5882FA"><h2><font color="black"><N>Abono</N></font></h2></th>  
+      <br></div>
+      <div id='logo1'> <br><br><br><br>
+                     <table id="fieldset2"  border-spacing="0" border="2px"> 
+                          <tr>
+                             <th bgcolor="#5882FA"><center><h2><font color="black"><N>Codigo</N></font></h2></th>
+                             <th bgcolor="#5882FA"><center><h2><font color="black"><N>Nombre</N></font></h2></th>
+                             <th bgcolor="#5882FA"><center><h2><font color="black"><N>Cargo</N></font></h2></th>
+                             <th bgcolor="#5882FA"><center><h2><font color="black"><N>Abono</N></font></h2></th>  
                           </tr>
                      <%
                         Do While Not rsMbrs.EOF
                      %>
                        <tr valign="TOP">
-                             <td WIDTH="70" align="left"><%=rsMbrs("Codigo")%>
-                             <td WIDTH="400" align="left"><%=rsMbrs("NombreCuenta")%></td>
+                             <td WIDTH="70" align="center"><%=rsMbrs("Codigo")%>
+                             <td WIDTH="400" align="center"><%=rsMbrs("NombreCuenta")%></td>
                              <%if rsMbrs("saldo") > 0 then %>
                                 <td WIDTH="400" align="right" ><%=rsMbrs("Saldo")%></td>
                                 <td>&nbsp</td>

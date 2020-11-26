@@ -35,18 +35,21 @@
       </head>
       <body leftmargin="10" topmargin="160">
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
-		  <div id='logo1'>
-               <td valign="top" class="content" align="center">      
+		  <div>
+               <td valign="top" class="content">      
                <% if Session("PeriodoCerrado") <> "no" then %>
-                <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
-			   <center><h1><font color="black"><N> Estado De Resultados <N></font></h1></center>
-          <left><h3><font color="black"><N> Ingresos<N></font></h3></left>
-                  <table align="center" border-spacing="0" width="500px">
+                <br><center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
+			   <center><h1><font color="black"><N> Estado De Resultados <N></font></h1></center></div>
+          <div><br>
+          
+          <table align="center" border-spacing="0" width="500px">
                        <tr>
                           <th bgcolor="#5882FA"><h2><font color="black"><N>Codigo</N></font></h2></th>
                           <th bgcolor="#5882FA"><h2><font color="black"><N>Nombre</N></font></h2></th>
                           <th colspan="2" bgcolor="#5882FA"><h2><font color="black"><N>Saldo</N></font></h2></th>	
-                       </tr>
+                       </tr></table>
+               <table align="center" border-spacing="0" width="500px">
+               <center><h5><font color="black"><N> Ingresos<N></font></h5></center>
                   <%Do While Not rsMbrs.EOF%>
                        <tr valign="TOP">
                           <td WIDTH="70" align="left"><%=rsMbrs("Codigo")%>
@@ -82,7 +85,7 @@
                     rsMbrs1.Open sql1, cnn1, 0, 1, &H0001
                   %>
                   <table align="center" border-spacing="0" width="500px">
-                    <left><h3><font color="black"><N>Egresos<N></font></h3></left>
+                    <center><h5><font color="black"><N>Egresos<N></font></h5></center>
                   <%Do While Not rsMbrs1.EOF%>
                         <tr valign="TOP">
                            <td WIDTH="70" align="left"><%=rsMbrs1("Codigo")%>

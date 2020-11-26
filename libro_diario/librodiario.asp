@@ -27,10 +27,6 @@
 		   <br><br>
        <p id="titulo">Libro diario</p>
        <br>
-       <hr>
-       <br>
-       <br>
-       <br>
 			          <%    
                    Dim Conexion, sql, List
                    Set Conexion = Server.CreateObject("ADODB.Connection")
@@ -38,13 +34,13 @@
                    sql = "SELECT Catalogo.NombreCuenta, Diario.NumTrans, Diario.codigo,Diario.cargo,Diario.abono,Diario.fecha FROM Catalogo, Diario WHERE Catalogo.Codigo=Diario.codigo ORDER BY Diario.NumTrans" 
 	           set List = Conexion.execute(sql)
                  %>
-		<center><table border = "1" width = "65%">
+		<center><table border = "2" width = "85%">
     		<tr style="font-size:200%">
-		      <th><h2> Numero de transacci&oacuten </h2></th>
-		      <th><h2> Fecha </h2></th>
-		      <th><h2> Cuenta </h2></th>
-		      <th><h2> Cargo </h2></th>
-		      <th><h2> Abono </h2></th>
+			  <th><h2><strong><center>Numero de transacci&oacuten </center></strong></h2></th>
+			  <th><h2><strong><center> Fecha </center></strong></h2></th>
+		      <th><h2><strong><center> Cuenta </center> </strong></h2></th>
+		      <th><h2><strong><center> Cargo </center></strong> </h2></th>
+		      <th><h2><strong><center> Abono </center></strong> </h2></th>
 		</tr>
 
 		    <% 

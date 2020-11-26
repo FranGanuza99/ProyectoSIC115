@@ -24,7 +24,6 @@
       </style>
 
         <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
-		<div id='logo1'>
                <td valign="top" class="content"> 
 			  <h1 align="center"><font color="black"><N>Catalogo de Cuentas </N></font></h1>             
                   <% 
@@ -35,7 +34,7 @@
                     set l = Conexion.execute(sql)
                     l.MoveNext
                   %>  
-                  <table border = "2" align = "center" >
+                  <table border = "2" align = "center" width ="65%">
                       <tr>
                          <th><h1><strong> CODIGO </strong></h1></th>
                          <th><h1><strong> NOMBRE </strong></h1></th>
@@ -76,7 +75,7 @@
                   %>   
                       <tr>
                          <td><font size ="4", color ="black"><strong> <%=l("codigo") %> </strong></td>
-                         <td align="left" width="400"><font size ="4", color ="black"><strong> <%=l("NombreCuenta") %> </strong></td>
+                         <td align="center" width="400"><font size ="4", color ="black"><strong> <%=l("NombreCuenta") %> </strong></td>
                          <td><font size ="4", color ="black"><strong> <%= tipo %> </strong></td>
                       </tr>
                   <% l.MoveNext 
@@ -87,6 +86,5 @@
                 </td>
               </tr>
            </table>
-         </div>
      </body>
 </html>

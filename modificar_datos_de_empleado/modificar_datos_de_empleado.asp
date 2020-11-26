@@ -37,14 +37,10 @@
 	<br><br>
        <p id="titulo"> Modificar datos de empleados</p>
        <br>
-       <hr>
-       <br>
-       <br>
-       <br>
-     <fieldset id="tablaLoginU" style="padding:2">
+        <fieldset id="tablaLoginU" style="padding:2">
             <center>
             <form method="get" action="modificar2.asp" onsubmit="return(validar(this))"><br>Modificar Datos
-            <br> Seleccione El Empleado 
+            <br> Seleccione el Empleado 
             <br>  <select name="usuario">
             <option value="0">-Seleccione un empleado-</option>
             <%

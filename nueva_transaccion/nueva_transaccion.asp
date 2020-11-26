@@ -33,14 +33,10 @@
 	 <br><br>
        <p id="titulo">Nueva transacci&oacuten</p>
        <br>
-       <hr>
-       <br>
-       <br>
-       <br>
                     <form name = "form1" method = "post" action = "registrarPartida.asp" OnSubmit = "return(validar(this));">
 
 
-  <table align = "center">
+  <table id="fieldset1" align = "center">
  <center><h1 style="color: #2A2D2E">CREAR PARTIDA</h1></center>
  <br><br><br><br>
    <tr style="font-size:200%">

@@ -34,19 +34,20 @@
     </style>
      <body leftmargin="10" topmargin="160">
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
-		  <div id='logo1'>
+		  <div>
                <td valign="top" class="content">   
                <% if Session("PeriodoCerrado") <> "no" then %>
-                <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
-			   <center><h1><font color="black"><N> Estado De Capital <N></font></h1></center>
-          <left><h3><font color="black"><N> Inversiones<N></font></h3></left>
-      <table align="center" border-spacing="0" width="500px">
+               <br> <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
+			   <center><h1><font color="black"><N> Estado De Capital <N></font></h1></center></div><br>
+          <div>
+      <table align="center" border-spacing="0" width="500px" >
                          
                              <th bgcolor="#5882FA"><h2><font color="black"><N>Codigo</N></font></h2></th>
                              <th bgcolor="#5882FA"><h2><font color="black"><N>Nombre</N></font></h2></th>
                              <th colspan="2" bgcolor="#5882FA"><h2><font color="black"><N>Saldo</N></font></h2></th>
-                             
-                          </tr>
+                          </tr></table>
+                          <center><h5><font color="black"><N> Inversiones<N></font></h5></center>
+                     <table align="center" border-spacing="0" width="500px" >
                      <%Do While Not rsMbrs.EOF%>
                           <tr valign="TOP">
                              <td  WIDTH="70" align="left"><%=rsMbrs("Codigo")%>
@@ -84,7 +85,7 @@
                        if NOT((rsMbrs1.BOF = TRUE) and (rsMbrs1.EOF =TRUE )) then
                      %>
                      <table align="center" border-spacing="0" width="500px">
-                      <left><h3><font color="black"><N>Desinversion<N></font></h3></left>
+                      <center><h5><font color="black"><N>Desinversion<N></font></h5></center>
             
                           <%Do While Not rsMbrs1.EOF%>
                           <tr valign="TOP">
