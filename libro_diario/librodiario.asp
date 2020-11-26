@@ -25,7 +25,7 @@
 
          <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 		   <br><br>
-       <p id="titulo">Libro diario</p>
+       <p id="titulo" style="font-size: 55px;">Libro diario</p>
        <br>
 			          <%    
                    Dim Conexion, sql, List
@@ -36,11 +36,11 @@
                  %>
 		<center><table border = "2" width = "85%">
     		<tr style="font-size:200%">
-			  <th><h2><strong><center>Numero de transacci&oacuten </center></strong></h2></th>
-			  <th><h2><strong><center> Fecha </center></strong></h2></th>
-		      <th><h2><strong><center> Cuenta </center> </strong></h2></th>
-		      <th><h2><strong><center> Cargo </center></strong> </h2></th>
-		      <th><h2><strong><center> Abono </center></strong> </h2></th>
+			  <th style="background-color: #e4da59;"><h2><strong><center>Numero de transacci&oacuten </center></strong></h2></th>
+			  <th style="background-color: #e4da59;"><h2><strong><center> Fecha </center></strong></h2></th>
+		      <th style="background-color: #e4da59;"><h2><strong><center> Cuenta </center> </strong></h2></th>
+		      <th style="background-color: #e4da59;"><h2><strong><center> Cargo </center></strong> </h2></th>
+		      <th style="background-color: #e4da59;"><h2><strong><center> Abono </center></strong> </h2></th>
 		</tr>
 
 		    <% 

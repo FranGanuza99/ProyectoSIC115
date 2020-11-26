@@ -25,7 +25,7 @@
 
         <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
                <td valign="top" class="content"> 
-			  <h1 align="center"><font color="black"><N>Catalogo de Cuentas </N></font></h1>             
+			  <p id="titulo" style="font-size: 55px;">Catalogo de Cuentas</p>            
                   <% 
                     Dim Conexion,sql, List, cod, nom
                     Set Conexion = Server.CreateObject("ADODB.Connection")
@@ -34,11 +34,11 @@
                     set l = Conexion.execute(sql)
                     l.MoveNext
                   %>  
-                  <table border = "2" align = "center" width ="65%">
+                  <table border = "2" align = "center" width ="65%" style="margin-bottom: 5%;">
                       <tr>
-                         <th><h1><strong> CODIGO </strong></h1></th>
-                         <th><h1><strong> NOMBRE </strong></h1></th>
-                         <th><h1><strong> TIPO </strong></h1></th>
+                         <th style="background-color: #e4da59;"><h1><strong> CODIGO </strong></h1></th>
+                         <th style="background-color: #e4da59;"><h1><strong> NOMBRE </strong></h1></th>
+                         <th style="background-color: #e4da59;"><h1><strong> TIPO </strong></h1></th>
                       </tr>
                   <% while NOT(l.EOF)
                          if l("Tipo") =1 then

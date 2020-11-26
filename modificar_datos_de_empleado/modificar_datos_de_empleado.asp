@@ -35,13 +35,14 @@
 
         <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 	<br><br>
-       <p id="titulo"> Modificar datos de empleados</p>
+       <p id="titulo" style="font-size: 55px;"> Modificar datos de empleados</p>
        <br>
         <fieldset id="tablaLoginU" style="padding:2">
             <center>
-            <form method="get" action="modificar2.asp" onsubmit="return(validar(this))"><br>Modificar Datos
-            <br> Seleccione el Empleado 
-            <br>  <select name="usuario">
+            <form method="get" action="modificar2.asp" onsubmit="return(validar(this))">
+            <p id="titulo" style="font-size: 40px; padding-left: 5%">Modificar Datos</p> 
+            <p id="titulo" style="font-size: 38px; color:black; padding-left: 10%;">Seleccione el Empleado</p> 
+            <br>  <select name="usuario" style="font-size: 30px;">
             <option value="0">-Seleccione un empleado-</option>
             <%
             Dim conn
@@ -60,7 +61,7 @@
             Wend 
             conn.close %>
             </select><br><br>
-            <input id="margenInput" type="submit" value="Aceptar">
+            <input id="margenInput" type="submit" value="Aceptar" style="font-size: 28px; border-radius: 15px; border-color: black; border-width: 4px;">
             </form>
             </form></center>
             </td>

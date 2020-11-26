@@ -35,7 +35,7 @@
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 		  <br><br>
-       <p id="titulo"> Consultar Datos Del Empleado</p>
+       <p id="titulo" style="font-size: 55px;"> Consultar Datos Del Empleado</p>
        <br>
        <hr>
        <br>
@@ -48,13 +48,13 @@
                   <form name = "formusuario" method = "get" action = "consulta2.asp" onsubmit="return(validar(this))">
                       <center> <table>    
                              <tr>
-                                <th colspan = "2"> Selecciona un Empleado </th>  
+                                <th colspan = "2" style="font-size: 45px; position: fixed; padding-left: 2cm;"> Selecciona un Empleado </th>  
 
                              </tr>
 
                              <tr>
                                 <td>              
- 	                           <select name="usuario">
+ 	                           <select name="usuario" style="margin: 2.50cm; font-size: 30px;">
                                      <option value="0">-Ning&uacuten empleado seleccionado-</option>
 	                           <% 
 		                     Dim Conexion 
@@ -78,7 +78,7 @@
                              </tr> 
                              <tr>            
                                 <td colspan = "2">
-                                   <input id="margenInput" type = "submit" name = "aceptar" value = "Aceptar ">
+                                   <input id="margenInput" type = "submit" name = "aceptar" value = "Aceptar " style="font-size: 28px; border-radius: 15px; border-color: black; border-width: 4px;">
                                 </td>
                              </tr> 
                        </table>  </center>

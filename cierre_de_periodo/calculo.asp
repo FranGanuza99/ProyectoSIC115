@@ -29,7 +29,7 @@
         </style>
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"--><br><br>
-		  <p id="titulo">Se ha cerrado el per&iacuteodo</p>
+		  <p id="titulo" style="font-size: 55px;">Se ha cerrado el per&iacuteodo</p>
        <br>
        <hr>
        <br>

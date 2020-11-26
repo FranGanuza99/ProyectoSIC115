@@ -31,7 +31,7 @@
 
         <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 	 <br><br>
-       <p id="titulo">Nueva transacci&oacuten</p>
+       <p id="titulo" style="font-size: 55px;">Nueva transacci&oacuten</p>
        <br>
                     <form name = "form1" method = "post" action = "registrarPartida.asp" OnSubmit = "return(validar(this));">
 

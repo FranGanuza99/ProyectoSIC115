@@ -34,12 +34,8 @@
 
          <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
 		 <br><br>
-       <p id="titulo">Eliminar empleado</p>
-       <br>
+       <p id="titulo" style="font-size: 55px;">Eliminar empleado</p>
        <hr>
-       <br>
-       <br>
-       <br>
                <center> <td valign="top" class="content"> 
 			  
                     <%
@@ -58,13 +54,13 @@
                   <form name = "Formulario" method = "get" action = "mostrar.asp" onsubmit="return(validar(this))">
                    <table>    
                         <tr>
-                           <th colspan = "2"> <h2><strong>Seleccione el empleado que desea eliminar</strong></h2></th>              
+                           <th colspan = "2" style="font-size: 45px; padding-left: 2cm;"> Seleccione el empleado que desea eliminar</th>              
                         </tr>
                         <br><br>
                         <tr>
                             <td>
                             <br><br>
- 	                    <select name="empleado">
+ 	                    <select name="empleado" style="margin: 1.50cm; font-size: 30px;">
                                 <option value="0">-Seleccione un usuario-</option>
 	                <% 
 		           sql="SELECT * FROM Empleados  ORDER BY Apellidos"
@@ -86,7 +82,7 @@
                         <tr>            
                            <td colspan = "2">
                             <br><br>
-                              <input id="margenInput" type = "submit" name = "aceptar" value = "ACEPTAR ">
+                              <input id="margenInput" type = "submit" name = "aceptar" value = "ACEPTAR " style="font-size: 28px; border-radius: 15px; border-color: black; border-width: 4px;">
                           </td>
                         </tr> 
 
