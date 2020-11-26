@@ -29,7 +29,7 @@
       </head>
       <style type="text/css">
       body {
-      background:url('/imagen/index.png') no-repeat center center fixed;
+      background:url('/imagen/fondodefault2.png') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -39,7 +39,7 @@
       <body leftmargin="10" topmargin="160">
         <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
          <br><br>
-                <p id="titulo">Consultar orden de fabricaci&oacuten </p>
+                <p id="titulo" style="font-size: 55px;">Consultar orden de fabricaci&oacuten </p>
        <br>
        <hr>
        <br>
@@ -49,8 +49,8 @@
                <td valign="top" class="content"> 
                    
                      <fieldset id="tablaLoginCom3" style="padding:3">
-           <center><h2><font color="black"> Orden De Fabricacion </font></h2></center>
-                       <table width="200" cellspacing="20" align="center"> 
+           <center><p style="color: black; font-size: 45px;"><strong>Orden De Fabricacion</strong></p></center>
+                       <table width="200" border="2" cellspacing="20" align="center" style="font-size: 25px;"> 
                              <tr>
                                 <td >  Fecha de expedicion:<br>
                                       <%=R("fecha")%>
@@ -72,25 +72,31 @@
                              </tr>
                         </table>
                         <p>&nbsp</p>
-                        <table  border="1" align="center" >
+                        <table  border="2" align="center" style="font-size: 25px;">
                  <tr>
-                          <th>Total Materia Prima</th>
-                                <th>Total Mano de Obra</th>
-                                <th>Total GIF</th>
+                                <th style="background-color: #e4da59;">Total Materia Prima</th>
+                                <th style="background-color: #e4da59;">Total Mano de Obra</th>
+                                <th style="background-color: #e4da59;">Total GIF</th>
                  </tr>
                  <tr>
                     <td><%=R("MontoMP")%></td>
-                                <td><%=R("MontoMObra")%></td>
-                                <td><%=R("MontoGif")%></td>
+                                <td>$<%=R("MontoMObra")%></td>
+                                <td>$<%=R("MontoGif")%></td>
                  </tr>
                          </table>
                          <p>&nbsp</p>
                          <p>&nbsp</p>
-                         <table width="300" align="center" bgcolor= "#455356">
-                              <tr bgcolor="white">            
-                                  <th >Monto Total<br>$ <%=R("Monto")%></th>
-                                  <th >Precio Unitario<br>$ <%=R("PrecioU")%></th>
+                         <table width="300" align="center" border="2" bgcolor= "#455356" style="font-size: 25px;">
+                              <tr>            
+                                  <th style="background-color: #e4da59;">Monto Total</th>
+                                  <th style="background-color: #e4da59;">Margen de beneficio (40%)</th>
+                                  <th style="background-color: #e4da59;">Precio Unitario</th>
                               </tr> 
+                              <tr>
+                                <td>$<%=R("Monto")%></td>
+                                <td>$<%=R("Monto")*0.4%></td>
+                                <td>$<%=R("PrecioU")*1.4%></td>
+                              </tr>
                          </table>  
                          <p>&nbsp</p>                             
                    </fieldset>
