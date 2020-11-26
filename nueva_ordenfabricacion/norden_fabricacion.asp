@@ -92,7 +92,7 @@
 		 <div id='Diario'>
                <td valign="top" class="content">                 
                    <form name="orden" method="POST" action="proces_orden.asp" onsubmit="return(validar(this))">
-                   <fieldset id="alinearT" style="padding: 5; margin:2; border-style:rige;"><br>
+                   <fieldset id="alinearT" style="padding: 5; margin:2; border-style:rige; margin-left: 105;"><br>
 				 
                           <table  width="200" cellspacing="20" align="center"> 
                               <tr>

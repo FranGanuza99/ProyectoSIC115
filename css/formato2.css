@@ -139,7 +139,7 @@
     #titulodefaultIng{
       position: relative; ;
       left: 0px;
-      top: 210px:;
+      top: 210px;
       font-weight: bold;
       font-size: 20px;
       color: black;
@@ -479,8 +479,9 @@
           }
 
           #alinearT{
-            position: relative;
-            left: -400px;
+            position: auto;
+            /*left: -400px;*/
+            
           }
 
 
