@@ -200,7 +200,7 @@
                         </select></td>
                         <td ><input id="costo1" name="costo1" type="text" onblur="validar1(this)" onfocus="this.blur()"></td>
                         <td ><input id="hora1" name="hora1" type="text" onblur="validar1(this)" onchange="suma()"></td>
-                        <td ><input id="tasa1" name="tasa1" type="text" onblur="validar1(this)"></td>
+                        <td ><input id="tasa1" name="tasa1" type="text" onblur="validar1(this)" onfocus="this.blur()"></td>
                         <td ><input id="horacif1" name="horacif1" type="text" onblur="validar1(this)" onfocus="this.blur()"></td>
                         
 		               </tr>
