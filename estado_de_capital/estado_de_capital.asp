@@ -75,7 +75,7 @@
                           <tr>
                              <td colspan="2" bgcolor="#A9BCF5" align="right"><N> TOTAL </N></td>       
                              
-                             <td colspan="2" bgcolor="#A9BCF5" align="right"><N> <%=abs(SumaInv) %> </N></td>
+                             <td colspan="2" bgcolor="#A9BCF5" align="right"><N> <%=abs(SumaInv)+session("utilidad") %> </N></td>
                           </tr>
 <!------------------------------------------------------------------------------------------------------------->
                      <%
@@ -120,7 +120,7 @@
                    </table>
                    <p>&nbsp</p>
 <!--------------------------------->
-                   <% capital = abs(SumaInv) - abs(SumaDesinv) %>
+                   <% capital = abs(SumaInv) + session("utilidad") - abs(SumaDesinv) %>
                    <%if session("kconta") > 0 then%>
 	                <h1><font color="black"><N>Capital Contable = $<%=capital%></N></font></h1> 
                    <%else%>
