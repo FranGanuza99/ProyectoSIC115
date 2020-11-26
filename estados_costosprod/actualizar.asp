@@ -39,11 +39,13 @@
                    numero=0
                 end if
                 
-                fecha=DATE()                
+                fecha=DATE()       
 
-                sql2="INSERT INTO Diario(NumTrans, codigo, cargo, fecha) VALUES('"&numero+1&"', '"&c&"', '"&monto&"', '"&fecha&"')"
+                ganancia = monto * 0.4         
+
+                sql2="INSERT INTO Diario(NumTrans, codigo, abono, fecha) VALUES('"&numero+1&"', '"&c&"', '"&Round (ganancia,2)&"', '"&fecha&"')"
                 conn.Execute(sql2)
-                sql2="INSERT INTO Diario(NumTrans, codigo, abono, fecha) VALUES('"&numero+1&"', '"&cod&"', '"&monto&"', '"&fecha&"')"
+                sql2="INSERT INTO Diario(NumTrans, codigo, cargo, fecha) VALUES('"&numero+1&"', '1000', '"&Round (ganancia,2)&"', '"&fecha&"')"
                 conn.Execute(sql2)
 
                 sql="SELECT * FROM ordenes WHERE NumOrden="&orden

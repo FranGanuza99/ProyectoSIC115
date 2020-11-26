@@ -57,18 +57,24 @@
                       <td><h2> Aguinaldo </h2></td>  
                       <td><h2> Vacaciones </h2></td>  
 	                    <td><h2> ISSS (7.5%)</h2></td>
+i
+<<<<<<< HEAD
 	                    <td><h2> AFP (6.5%)</h2></td>
                    </center> 
+=======
+	                    <td><h2> AFP (7.75%)</h2></td>
+                      
+>>>>>>> francisco_rama
 	                 </tr>
                     <% 
                       while not spl1.EOF 
                         nominal = spl1("Salario")
-                        septimo = nominal * 7
-                        aguinaldo = (15 * nominal)/52
-                        vacaciones = ((15 * nominal) * 1.3)/52
-                        isss = (septimo + Round (vacaciones, 2)) * 0.075
-                        afp = (septimo + Round (vacaciones, 2)) * 0.065
-                        sueldo = septimo + Round (aguinaldo, 2) + Round (vacaciones, 2) + isss + afp 
+                        septimo = nominal * 2
+                        aguinaldo = (10 * nominal)/52
+                        vacaciones = ((10 * nominal) * 1.3)/52
+                        isss = ((septimo + nominal * 5) + Round (vacaciones, 2)) * 0.075
+                        afp = ((septimo + nominal * 5) + Round (vacaciones, 2)) * 0.0775
+                        sueldo = (nominal * 5) + septimo + Round (aguinaldo, 2) + Round (vacaciones, 2) + isss + afp 
 
                     %>
                          <TR width="100%" align="center">
