@@ -48,7 +48,7 @@
      nobra=request.form("obrero"&i)
      costohora=request.form("costo"&i)
      numhora=request.form("hora"&i)
-     if nobra <> "" then
+     if costohora <> "" then
         montobra= montobra+(costohora*numhora)
      end if
   next
@@ -62,8 +62,8 @@
      tasa=request.form("tasa"&i)
      horacif=request.form("horacif"&i)
      if tasa <> "" then
-         electricidad = (tasa - 0.0625) * horacif
-         internet = 0.0625 * horacif
+         electricidad = 3.5 * horacif
+         internet = (0.0625 * horacif) / j
          montogif = Round (electricidad,2) + Round (internet,2)
      end if
   next
