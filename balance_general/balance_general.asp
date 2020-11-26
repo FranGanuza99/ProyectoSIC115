@@ -105,48 +105,55 @@
                             </tr>
 <!------------------------------------------------------------------------------------------------------------->
                       <%
-                        sql3 ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND (Catalogo.Tipo=3)"
+                        SumaInv = 0
+                        SumaDesinv = 0
+
+                        sql3 ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND Catalogo.codigo >= 3000 AND Catalogo.codigo < 4000"
                         set rsMbrs1 = cnn1.execute(sql3)
+
+                        'calcula la suma del capital
+                        while not rsMbrs1.EOF
+                          SumaInv = SumaInv + abs(rsMbrs1("Saldo"))
+                          rsMbrs1.movenext
+                        wend
+
+                        sql3 ="SELECT Catalogo.NombreCuenta, Mayor.codigo, Mayor.saldo FROM Catalogo, Mayor WHERE Catalogo.Codigo=Mayor.codigo AND (Catalogo.Tipo=7)"
+                        set rsMbrs6 = cnn1.execute(sql3)
+
+                        'calcula la suma del capital
+                        while not rsMbrs6.EOF
+                          SumaDesinv = SumaDesinv + abs(rsMbrs6("Saldo"))
+                          rsMbrs6.movenext
+                        wend
+
+                        capital = SumaInv - SumaDesinv + session("utilidad")
+
                       %>
                       <table align="center" border-spacing="0" width="500px">
                               <left><h5><font color="black"><N>Capital<N></font></h5></left>
-                
-                      <%Do While Not rsMbrs1.EOF%>
-                             <tr valign="TOP">
-                                <td WIDTH="70" align="left"><%=rsMbrs1("Codigo")%>
-                                <td WIDTH="400" align="left"><%=rsMbrs1("NombreCuenta")%></td>
-                                <td WIDTH="100" align="right"><%=abs(rsMbrs1("Saldo"))%></td>
-                             </tr>
-                      <%
-                             rsMbrs1.MoveNext
-                        loop
-                        'calcula la suma del capital
-                        set ql1=cnn1.execute(sql3)
-                        while not ql1.EOF
-	                     SumaCapital = SumaCapital + abs(ql1("Saldo"))
-	                     ql1.movenext
-                        wend
-                      %>
+
                              <tr valign="TOP">
                                 <td WIDTH="70" align="left">3006</td>
                                 <td WIDTH="400" align="center">Capital contable</td>
-                                <td WIDTH="100" align="right"><%=session("kconta")%></td>
+                                <td WIDTH="100" align="right"><%=capital%></td>
                              </tr>
                       <% 
-                        TotalKconta = session("kconta") 
+                        TotalKconta = capital
                         TotalPart = SumaPasivo + TotalKconta
                         rsMbrs.Close
                         rsMbrs1.Close
                         rsMbrs2.Close
+			rsMbrs6.Close
                         Set rsMbrs = Nothing
                         Set rsMbrs1 = Nothing
                         Set rsMbrs2 = Nothing
+			Set rsMbrs6 = Nothing
                         cnn1.Close
                         Set cnn1 = Nothing
                       %>
                              <tr>
                                 <td colspan="2" bgcolor="#A9BCF5" align="right"><N>TOTAL CAPITAL</N></td>       
-                                 <td bgcolor="#A9BCF5" align="right"><N><%=TotalKconta%></N></td>
+                                 <td bgcolor="#A9BCF5" align="right"><N><%=capital%></N></td>
                              </tr>
                       </table>
                       <p>&nbsp;<p>
