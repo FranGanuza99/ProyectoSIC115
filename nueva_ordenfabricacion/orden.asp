@@ -41,7 +41,7 @@
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
           <br><br>
-                <p id="titulo">Nueva orden de fabricaci�n</p>
+                <p id="titulo" style="font-size: 55px;">Nueva orden de fabricacion</p>
        <br>
        <hr>
        <br>
@@ -49,15 +49,15 @@
        <br>
 		  <div id='logo1'>
                <td valign="top" class="content"> 
-                    <fieldset id="tablaLoginCom4" style="padding:12">
+                    <fieldset id="tablaLoginCom4" style="padding:12px">
                    
-				   <center><h1><font color="black"> Orden De Fabricacion Agregada</font></h1></center>
-                   <table width="600" cellspacing="10" align="center" border="2"> 
+                    <strong><h2 style="font-size: 45px; margin-left: 100px; color: black;">Orden De Fabricacion Agregada</h2></strong>
+                   <table width="600" cellspacing="10" align="center" border="2" style="font-size: 25px;"> 
                         <tr>
-                           <td><h3><strong>Fecha de expedicion:</strong></h3><br>
+                           <td><strong>Fecha de expedicion:</strong><br>
                                 <strong><%=R("fecha")%></strong>
                            </td>
-                           <td align="center"><h3><strong>No de Orden:</strong></h3><br>
+                           <td align="center"><strong>No de Orden:</strong><br>
                                 <strong><%=R("NumOrden")%></strong>
                            </td>
                         </tr>
@@ -74,34 +74,40 @@
                    </table>
                    <p>&nbsp</p>
                    
-                   <table  border="5" align="center">
+                   <table  border="5" style="margin-left:150px">
 		        <tr>
-	                  <th><h2><strong>Total Materia Prima</strong></h2></th>
-                    <th><h2><strong>Total Mano de Obra</strong></h2></th>
-                    <th><h2><strong>Total GIF</strong></h2></th>
+	               <th style="background-color: #e4da59;"><h2><strong>Total Materia Prima</strong></h2></th>
+                    <th style="background-color: #e4da59;"><h2><strong>Total Mano de Obra</strong></h2></th>
+                    <th style="background-color: #e4da59;"><h2><strong>Total GIF</strong></h2></th>
 		        </tr>
 		        <tr>
-		           <td><h2><strong><%=R("MontoMP")%></strong></h2></td>
-               <td><h2><strong><%=R("MontoMObra")%></strong></h2></td>
-               <td><h2><strong><%=R("MontoGif")%></strong></h2></td>
+		           <td><h2><strong>$<%=R("MontoMP")%></strong></h2></td>
+               <td><h2><strong>$<%=R("MontoMObra")%></strong></h2></td>
+               <td><h2><strong>$<%=R("MontoGif")%></strong></h2></td>
 		        </tr>
                    </table>
                    <p>&nbsp</p>
                    <p>&nbsp</p>
-                   <table width="300" align="center">
+                   <table width="400" border="5" style="margin-left: 120px;">
                         <tr>            
-                           <th ><h2><strong>Monto Total<br><%=R("Monto")%></strong></h2></th>
-                           <th ><h2><strong>Precio Unitario<br><%=R("PrecioU")%></strong></h2></th>
+                           <th style="background-color: #e4da59;"><h2><strong>Monto Total</strong></h2></th>
+                           <th style="background-color: #e4da59;"><h2><strong>Margen de beneficio (40%)</strong></h2></th>
+                           <th style="background-color: #e4da59;"><h2><strong>Precio Unitario</strong></h2></th>
+                        </tr>
+                        <tr>
+                             <td><h2><strong>$<%=R("Monto")%><strong</h2></td>
+                              <td><h2><strong>$<%=R("Monto")*0.4%></strong></h2></td>
+                              <td><h2><strong>$<%=R("PrecioU")*1.4%></strong></h2></td>
                         </tr> 
                    </table>  
 
                    <p>&nbsp</p> 
-                   <center><h2><a href="norden_fabricacion.asp">Agregar otra orden</a><h2></center>    
-
+                    <button style="border-radius: 12px; border-color: black; font-size: 30px; margin-left: 30%;margin-right: 10%; margin-bottom: 5px;"><a href="norden_fabricacion.asp">Agregar otra orden</a></button>
                    </fieldset>
-                </td>
+                 
+                 </td>
               </tr>
-           </table>
+          </table>
          </div>
      </body>
 </html>
