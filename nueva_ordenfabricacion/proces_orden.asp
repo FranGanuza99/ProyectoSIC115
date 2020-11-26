@@ -62,8 +62,8 @@
      tasa=request.form("tasa"&i)
      horacif=request.form("horacif"&i)
      if tasa <> "" then
-         electricidad = 3.5 * horacif
-         internet = (tasa - 3.5) * horacif
+         electricidad = (tasa - 0.0625) * horacif
+         internet = 0.0625 * horacif
          montogif = Round (electricidad,2) + Round (internet,2)
      end if
   next

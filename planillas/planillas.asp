@@ -57,14 +57,8 @@
                       <td><h2> Aguinaldo </h2></td>  
                       <td><h2> Vacaciones </h2></td>  
 	                    <td><h2> ISSS (7.5%)</h2></td>
-i
-<<<<<<< HEAD
-	                    <td><h2> AFP (6.5%)</h2></td>
-                   </center> 
-=======
 	                    <td><h2> AFP (7.75%)</h2></td>
-                      
->>>>>>> francisco_rama
+                   </center> 
 	                 </tr>
                     <% 
                       while not spl1.EOF 
