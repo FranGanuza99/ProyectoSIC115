@@ -68,7 +68,7 @@
      <body leftmargin="10" topmargin="160">
          <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
          <br><br>
-                <p id="titulo">Finalizar orden de fabricaci&oacuten</p>
+                <p id="titulo" style="font-size: 55px;">Finalizar orden de fabricaci&oacuten</p>
        <br>
        <hr>
        <br>
@@ -77,7 +77,7 @@
      <div id='logo1'>
                <td valign="top" class="content"> 
                    <fieldset id="tablaLoginCom5" style="padding:8">          
-                    <center><h2><font color="black"> Orden De Fabricacion Finalizada </font></h2></center>
+                    <center><p style="font-size: 45px; color: black;"><strong>Orden De Fabricacion Finalizada</strong></p></center>
         <table width="400" cellspacing="20" align="center" border="3 bgcolor="#455356"> 
             <tr>
               <td><h3><strong>Fecha de expedicion:</strong></h3>
@@ -89,9 +89,9 @@
               </td>
             </tr>
             <tr>
-               <td><h3><strong>Producto:</strong></h3>
-                  
-                  <%=L("NombreCuenta")%>
+               <td><h3><strong>Producto:</strong></h3><br>
+                <p style="color: black; padding-bottom: 5%;">Software</p>
+                  <!--<%=L("NombreCuenta")%>-->
                </td>
                <td align="center"><h3><strong>Cantidad:</strong></h3>
                   
@@ -100,25 +100,31 @@
              </tr>
       </table>
       <p>&nbsp</p>
-      <table  border="1" align="center" >
+      <table  border="1" align="center" style="font-size: 25px;">
        <tr>
-                    <th>Total Materia Prima</th>
-                          <th>Total Mano de Obra</th>
-                          <th>Total GIF</th>
+                          <th style="background-color: #e4da59;">Total Materia Prima</th>
+                          <th style="background-color: #e4da59;">Total Mano de Obra</th>
+                          <th style="background-color: #e4da59;">Total GIF</th>
        </tr>
        <tr>
-              <td><%=R("MontoMP")%></td>
-                          <td><%=R("MontoMObra")%></td>
-                          <td><%=R("MontoGif")%></td>
+              <td>$<%=R("MontoMP")%></td>
+                          <td>$<%=R("MontoMObra")%></td>
+                          <td>$<%=R("MontoGif")%></td>
        </tr>
       </table>
       <p>&nbsp</p>
       <p>&nbsp</p>
-      <table border="1" width="300" align="center">
+      <table border="2" width="300" align="center" style="font-size: 25px;">
              <tr>            
-                 <th >Monto Total<br>$ <%=R("Monto")%></th>
-                 <th >Precio Unitario<br>$ <%=R("PrecioU")%></th>
+                 <th style="background-color: #e4da59;">Monto Total</th>
+                 <th style="background-color: #e4da59;">Margen de beneficio (40%)</th>
+                 <th style="background-color: #e4da59;">Precio Unitario</th>
              </tr> 
+             <tr>
+               <td>$<%=R("Monto")%></td>
+               <td>$<%=R("Monto")*0.4%></td>
+               <td>$<%=R("PrecioU")*1.4%></td>
+             </tr>
       </table>  
       <p>&nbsp</p>                             
       </fieldset>
