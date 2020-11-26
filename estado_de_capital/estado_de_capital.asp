@@ -121,7 +121,7 @@
                    <p>&nbsp</p>
 <!--------------------------------->
                    <% capital = abs(SumaInv) + session("utilidad") - abs(SumaDesinv) %>
-                   <%if session("kconta") > 0 then%>
+                   <%if capital > 0 then%>
 	                <h1><font color="black"><N>Capital Contable = $<%=capital%></N></font></h1> 
                    <%else%>
 	                <h1><font color="black"><N>Capital Contable = $(<%=abs(capital)%>)</N></font></h1>
