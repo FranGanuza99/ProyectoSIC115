@@ -48,6 +48,7 @@
                           </tr></table>
                           <center><h5><font color="black"><N> Inversiones<N></font></h5></center>
                      <table align="center" border-spacing="0" width="500px" >
+                     <%SumaInv=0%>
                      <%Do While Not rsMbrs.EOF%>
                           <tr valign="TOP">
                              <td  WIDTH="70" align="left"><%=rsMbrs("Codigo")%>
@@ -61,8 +62,7 @@
                           </tr>
                           <%
                             end if
-                            SumaInv=0
-                            SumaDesinv=0
+                            SumaInv=SumaInv+rsMbrs("Saldo")
                             rsMbrs.MoveNext
                        loop
                      %>
@@ -75,7 +75,7 @@
                           <tr>
                              <td colspan="2" bgcolor="#A9BCF5" align="right"><N> TOTAL </N></td>       
                              
-                             <td colspan="2" bgcolor="#A9BCF5" align="right"><N> <%=session("Totalinv") %> </N></td>
+                             <td colspan="2" bgcolor="#A9BCF5" align="right"><N> <%=abs(SumaInv) %> </N></td>
                           </tr>
 <!------------------------------------------------------------------------------------------------------------->
                      <%
@@ -86,7 +86,7 @@
                      %>
                      <table align="center" border-spacing="0" width="500px">
                       <center><h5><font color="black"><N>Desinversion<N></font></h5></center>
-            
+                           <%SumaDesinv=0%>
                           <%Do While Not rsMbrs1.EOF%>
                           <tr valign="TOP">
                              <td WIDTH="70" align="left"><%=rsMbrs1("Codigo")%>
@@ -100,6 +100,7 @@
                           </tr>
                      <%         
                                end if
+                               SumaDesinv=SumaDesinv+rsMbrs1("Saldo")
                                rsMbrs1.MoveNext
                             loop
                        end if
@@ -113,16 +114,17 @@
                          <tr>
                             <td colspan="2" bgcolor="#A9BCF5" align="right"><N> TOTAL </N></td>       
                                  
-                            <td colspan="2" bgcolor="#A9BCF5" align="right"><N> (<%=session("SumaDesinv") %>)</N></td>
+                            <td colspan="2" bgcolor="#A9BCF5" align="right"><N> (<%=SumaDesinv %>)</N></td>
                             
                          </tr>
                    </table>
                    <p>&nbsp</p>
 <!--------------------------------->
+                   <% capital = abs(SumaInv) - abs(SumaDesinv) %>
                    <%if session("kconta") > 0 then%>
-	                <h1><font color="black"><N>Capital Contable = $<% Response.Write(session("kconta"))%></N></font></h1> 
+	                <h1><font color="black"><N>Capital Contable = $<%=capital%></N></font></h1> 
                    <%else%>
-	                <h1><font color="black"><N>Capital Contable = $(<% Response.Write(abs(session("kconta")))%>)</N></font></h1>
+	                <h1><font color="black"><N>Capital Contable = $(<%=abs(capital)%>)</N></font></h1>
                    <%end if
               else %>
              <h1><font color="black"><N> No Has Cerrado Periodo!! </N></font></h1>

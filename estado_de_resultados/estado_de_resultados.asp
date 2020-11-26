@@ -123,12 +123,12 @@
                         
                   </table>
 <!--------------------------------->
-
-                  <%if session("utilidad") > 0 then%>
-        	    <h1><font color="black"><N>Utilidad = $<% Response.Write(session("utilidad"))%></N></font></h1> 
+                  <% ganancia = SumaIngreso - SumaGasto %>
+                  <%if ganancia > 0 then%>
+        	    <h1><font color="black"><N>Utilidad = $<%=ganancia%></N></font></h1> 
 	           <h1><font color="black"><N> Se Obtuvieron Ganancias </N></font></h1>
                   <%else	%>
-	            <h1><font color="red"><N>Utilidad = $(<% Response.Write(abs(session("utilidad")))%>)</N></font></h1>
+	            <h1><font color="red"><N>Utilidad = $(<%=ganancia%>)</N></font></h1>
 	            <h1><font color="red"><N> Se Obtuvieron Perdidas </N></font></h1>
                   <%end if
              else %>
