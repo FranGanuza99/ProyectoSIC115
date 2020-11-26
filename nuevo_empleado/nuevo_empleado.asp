@@ -28,17 +28,12 @@
            <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
              <br><br>
          <p id="titulo"> Formulario de nuevo empleado</p>
-         <br>
-         <hr>
-         <br>
-         <br>
-         <br>
       
      <fieldset id="tablaLoginEmpleado" style="padding:2">
 
       <td valign="top" class="content">      
-        
-       .<center><h2><N> Complete el fomulario con los datos correspondientes</h2></center>
+        <br>
+       <center><h2><N> Complete el fomulario con los datos correspondientes</h2></center>
        <br>
           <form method="post" action="capturar_datos.asp" onSubmit = "return(validar(this));">
           <center><p id="inputEmpleado">Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,12 +51,10 @@
           <center><p id="inputEmpleado">Horas X ($)&nbsp;&nbsp;
           <input id="cajitasInput"  type="text" name="hora" size="25" value=""<% =Request("log") %>">
                       <br>
-                      <br><br>
-                      <br>
 
              <p align="center"><input id="margenInput" type="submit" name="Submit" value="Guardar"></p>
                       </form>
-                   <fielset>
+                   <fieldset>
                </td>
              </tr>
            </table>

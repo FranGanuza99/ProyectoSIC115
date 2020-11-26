@@ -31,23 +31,25 @@
     </style>
      <body leftmargin="10" topmargin="160">
          <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
-		 <div id='logo1'>
+		 <div>
                <td valign="top" class="content"> 
                <% if Session("PeriodoCerrado") <> "no" then %>
                 <center><h1><font color="black"><N> Empresa Consultora de Software MICROTECN <N></font></h1></center>
-			   <center><h1><font color="black"><N> Balance General </N></font></h1></center>
-           <left><h3><font color="black"><N>Activos</N></font></h3></left>
+			   <center><h1><font color="black"><N> Balance General </N></font></h1></center></div>
+           <div id="logo1">
+           <br><br><br>
                        <table align="center" border-spacing="0" width="500px">
                           <tr>
                              <th bgcolor="#5882FA"><h2><font color="black"><N>Codigo</N></font></h2></th>
                              <th bgcolor="#5882FA"><h2><font color="black"><N>Nombre</N></font></h2></th>
                              <th bgcolor="#5882FA"><h2><font color="black"><N>Saldo</N></font></h2></th>
-                          </tr>
-                          
+                          </tr><table>
+                    <table align="center" border-spacing="0" width="500px">
+                    <left><h5><font color="black"><N>Activos</N></font></h5></left>
                      <%Do While Not rsMbrs.EOF%>
                           <tr valign="TOP">
                               <td WIDTH="70" align="left"><%=rsMbrs("Codigo")%>
-                              <td WIDTH="400" align="left"><%=rsMbrs("NombreCuenta")%></td>
+                              <td WIDTH="400" align="center"><%=rsMbrs("NombreCuenta")%></td>
                               <td WIDTH="100" align="right"><%=abs(rsMbrs("Saldo"))%></td>
                           </tr>
                      <%
@@ -78,13 +80,13 @@
 
                       %>
                       <table align="center" border-spacing="0" width="500px">
-                         <left><h3><font color="black"><N>Pasivos</N></font></h3></left>
+                         <left><h5><font color="black"><N>Pasivos</N></font></h5></left>
           
       
                       <%Do While Not rsMbrs2.EOF%>
                             <tr valign="TOP">
                                <td WIDTH="70" align="left"><%=rsMbrs2("Codigo")%>
-                               <td WIDTH="400" align="left"><%=rsMbrs2("NombreCuenta")%></td>
+                               <td WIDTH="400" align="center"><%=rsMbrs2("NombreCuenta")%></td>
                                <td WIDTH="100" align="right"><%=abs(rsMbrs2("Saldo"))%></td>
                             </tr>
                       <%
@@ -107,7 +109,7 @@
                         set rsMbrs1 = cnn1.execute(sql3)
                       %>
                       <table align="center" border-spacing="0" width="500px">
-                              <left><h3><font color="black"><N>Capital<N></font></h3></left>
+                              <left><h5><font color="black"><N>Capital<N></font></h5></left>
                 
                       <%Do While Not rsMbrs1.EOF%>
                              <tr valign="TOP">
@@ -127,7 +129,7 @@
                       %>
                              <tr valign="TOP">
                                 <td WIDTH="70" align="left">3006</td>
-                                <td WIDTH="400" align="left">Capital contable</td>
+                                <td WIDTH="400" align="center">Capital contable</td>
                                 <td WIDTH="100" align="right"><%=session("kconta")%></td>
                              </tr>
                       <% 

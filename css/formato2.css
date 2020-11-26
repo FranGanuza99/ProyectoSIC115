@@ -210,7 +210,7 @@
       border-radius: 20px;
       border-style: solid;
       border-color: #C3D2D5;
-       width:400px;
+      width:400px;
       height:400px;
       position: relative;
       top: -10px;
@@ -426,7 +426,8 @@
       #fieldset2{
       position: relative;
       left: -200px;
-
+      width: fit-content;
+      height: fit-content;
    
 
       }

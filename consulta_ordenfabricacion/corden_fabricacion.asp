@@ -46,7 +46,7 @@
      <body leftmargin="10" topmargin="160">
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
            <br><br>
-                <p id="titulo">Consultar orden de fabricaci&oacuten </p>
+                <p id="titulo" style="font-size: 55px;">Consultar orden de fabricaci&oacuten </p>
        <br>
        <hr>
        <br>
@@ -57,10 +57,10 @@
        <fieldset id="tablaLoginCom" style="padding:2">
                <td valign="top" class="content"> 
         
-                    <h3 align="center">Seleccione una orden de fabricacion</h3>
+                   <p id="titulo" style="font-size: 35px; margin-top: 20%; color: black;">Seleccione una orden de fabricacion</p>
                   <p>&nbsp</p>
                   <form name="dat" method="POST" action="mostrar_orden.asp" onsubmit="return(validar(this))">
-                        <center><select name="orden">
+                        <center><select name="orden" style="margin: 0.5cm; font-size: 25px;">
                              <option value="0" selected>Seleccione una orden</option>
                   <%
                     while Not(R.EOF)
@@ -71,7 +71,7 @@
                   %>
                         </select></center>
                         <p>&nbsp</p>
-                        <center><input type= "submit" name="aceptar" value="Aceptar" ></center>
+                        <center><input type= "submit" name="aceptar" value="Aceptar" style="font-size: 20px; border-radius: 15px; border-color: black; border-width: 4px;"></center>
                    </form>
                 </td>
               </tr>

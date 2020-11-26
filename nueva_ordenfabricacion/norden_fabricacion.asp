@@ -26,7 +26,7 @@
 
          <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
              <br><br>
-       <p id="titulo">Nueva orden de fabricaci&oacuten</p>
+       <p id="titulo" style="font-size: 55px;">Nueva orden de fabricaci&oacuten</p>
        <br>
        <hr>
        <br>
@@ -39,10 +39,10 @@
 				 
                           <table  width="200" cellspacing="20" align="center"> 
                               <tr>
-                                 <td>  Fecha de expedicion:<br>
+                                 <td style="font-size: 15px;">  Fecha de expedicion:<br>
                                      <input type="text" name="fecha" value="<%=FormatDateTime(now,2)%>" size="10" maxlength="10">
                                  </td>
-                                 <td align="right">
+                                 <td align="right" style="font-size: 15px;">
 	                               No de Orden:<br>
                               <%
                                 'Creacion del Objeto para conectarse a la base de datos 
@@ -68,7 +68,7 @@
                                  </td>
                               </tr>
                               <tr>
-                                 <td>
+                                 <td style="font-size: 15px;">
                                        Producto:<br>
                                     <select name="producto">
                                        <option value="0">Seleccione un producto</option>
@@ -86,14 +86,14 @@
 	                       %>   
                                     </select>
                                  </td>
-                                 <td align="right">
+                                 <td align="right" style="font-size: 15px;">
                                       Cantidad:<br>
                                      <input type="text" name="cantidad" size="10" onblur="validar1(this)">
                                  </td>
                                </tr>
                           </table>
                           <p>&nbsp</p>
-                          <table  border="1" align="center">
+                          <table border="1" align="center" style="font-size: 12.5px; background-color: #e4da59;">
 		               <tr>
                         <th colspan="2">Materia Prima</th>
                         <th colspan="3">Mano de Obra</th>
@@ -202,8 +202,8 @@
                           <p>&nbsp</p>
                           <table width="300" align="center">
                                <tr>            
-                                  <th ><input type = "submit" name = "aceptar" value = "Aceptar"></th>
-                                  <th ><input type = "reset" name = "clear" value = "Borrar"></th>
+                                  <th ><input type = "submit" name = "aceptar" value = "Aceptar"  style="font-size: 28px; border-radius: 15px; border-color: black; border-width: 4px;"></th>
+                                  <th ><input type = "reset" name = "clear" value = "Borrar"  style="font-size: 28px; border-radius: 15px; border-color: black; border-width: 4px;"></th>
                                </tr> 
                           </table>  
                           <p>&nbsp</p>                             

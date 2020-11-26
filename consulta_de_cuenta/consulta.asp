@@ -25,7 +25,7 @@
 
           <!--#include virtual="/Sistema_Contable/plantilla.asp"-->
              <br><br>
-                <p id="titulo">Consultar cuentas</p>
+                <p id="titulo" style="font-size: 55px;">Consultar cuentas</p>
        <br>
        <hr>
        <br>
@@ -55,25 +55,25 @@
                     saldo=cargo-abono
                     nombre=resul("NombreCuenta")
                   %>
-                    <table id="fieldset1" border="2" cellspacing="5" cellpadding="10" align="center">
+                    <table id="fieldset1" border="1" cellspacing="5" cellpadding="10" style="margin-left: 30%; margin-top: 10%;">
                           <tr> 
-                             <th>Nombre cuenta </th>
-                             <td><%=nombre%></td>
+                             <th style="font-size: 25px; background-color: #e4da59;"><center>Nombre cuenta</center> </th>
+                             <td style="font-size: 25px;"><%=nombre%></td>
                           </tr>
                           <tr> 
-                              <th>CARGO</th>
-                              <td>$ <%=cargo%></td>
+                              <th style="font-size: 25px; background-color: #e4da59;"><center>CARGO</center></th>
+                              <td style="font-size: 25px;">$ <%=cargo%></td>
                           </tr>
                           <tr> 
-                             <th>ABONO</th>
-                             <td>$ <%=abono%></td>
+                             <th style="font-size: 25px; background-color: #e4da59;"><center>ABONO</center></th>
+                             <td style="font-size: 25px;">$ <%=abono%></td>
                           </tr>
                           <tr> 
-                             <th>SALDO</th>
+                             <th style="font-size: 25px; background-color: #e4da59;"><center>SALDO</center></th>
                           <% if saldo < 0 then%>
-                             <td> (<%=abs(saldo)%>)</td>
+                             <td style="font-size: 25px;"> (<%=abs(saldo)%>)</td>
                           <%else%>
-                             <td>$ <%=saldo%></td>  
+                             <td style="font-size: 25px; border-width: 2.5px;">$ <%=saldo%></td>  
                           <%end if%>
                           </tr>
                     </table>
